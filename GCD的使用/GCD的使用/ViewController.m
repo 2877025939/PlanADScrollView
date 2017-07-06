@@ -17,24 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    /*
-     1.GCD 是iOS4推出的，C语言框架，能够自动利用更多cpu的核数，自动管理线程的生命周期
-     
-     2.队列分为四种:
-     串行（Serial）:让任务一个完毕之后接着另一个执行
-     并发（Concurrent）:可以让多个任务并发（同时）执行（自动开启多个线程同时执行任务）并发功能只有在异步（dispatch_async）函数下才有效。
-     同步（Synchronous）:在当前线程中执行任务，不具备开启新线程的能力
-     异步（Asynchronous）:在新的线程中执行任务，具备开启新线程的能力
-     
-     
-     */
+   
     
     
     // GCD异步串行的使用
     [self GCD];
     
     // GCD异步并行的使用
-    [self GCD1];
+    //[self GCD1];
     
 }
 
