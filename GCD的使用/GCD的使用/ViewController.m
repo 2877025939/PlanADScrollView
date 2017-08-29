@@ -18,18 +18,38 @@
     [super viewDidLoad];
     
    
-    
+   // [self GCD];
     
     // GCD异步串行的使用
-    [self GCD];
+    [self GCD1];
     
     // GCD异步并行的使用
-    //[self GCD1];
+   // [self GCD2];
     
 }
-
-#pragma mark - GCD异步串行的使用
 -(void)GCD{
+    
+    //dispatch_queue_t queue = dispatch_queue_create("now", DISPATCH_QUEUE_SERIAL);
+    //创建队列
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    
+    //异步执行
+    dispatch_async(queue, ^{
+        
+         NSLog(@"当前线程- %@", [NSThread currentThread]);
+        
+        //主线程刷新数据
+        dispatch_async(dispatch_get_main_queue(), ^{
+            
+            NSLog(@"当前线程- %@", [NSThread currentThread]);
+            
+        });
+    });
+    
+}
+#pragma mark - GCD异步串行的使用
+-(void)GCD1{
+    
     
     // 1.创建队列组，串行加通知
     dispatch_group_t group = dispatch_group_create();
@@ -56,32 +76,33 @@
     
     //4.都完成后会自动通知
     dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        
         //主线程刷新数据
         NSLog(@"完成 - %@", [NSThread currentThread]);
         
     });
     
     
-   // 不通知进程是否结束的串行
-    dispatch_async(concurrencyQueue, ^{
-        
-        NSLog(@"group-1 %@", [NSThread currentThread]);
-        
-    });
-    dispatch_async(concurrencyQueue, ^{
-        NSLog(@"group-2 %@", [NSThread currentThread]);
-    });
+//   // 不通知进程是否结束的串行
+//    dispatch_async(concurrencyQueue, ^{
+//        
+//        NSLog(@"group-1 %@", [NSThread currentThread]);
+//        
+//    });
+//    dispatch_async(concurrencyQueue, ^{
+//        NSLog(@"group-2 %@", [NSThread currentThread]);
+//    });
+//    
+//    dispatch_async(concurrencyQueue, ^{
+//        NSLog(@"group-3 %@", [NSThread currentThread]);
+//    });
     
-    dispatch_async(concurrencyQueue, ^{
-        NSLog(@"group-3 %@", [NSThread currentThread]);
-        
-    });
     
 }
 
 
 #pragma mark - GCD异步并行的使用
--(void)GCD1{
+-(void)GCD2{
     
     // GCD异步并行的使用
     
