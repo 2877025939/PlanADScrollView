@@ -143,15 +143,15 @@
         }];
     
         [operation addExecutionBlock:^() {
-            NSLog(@"又执行了1个新的操作，线程：%@", [NSThread currentThread]);
+            NSLog(@"group-1 线程：%@", [NSThread currentThread]);
         }];
     
         [operation addExecutionBlock:^() {
-            NSLog(@"又执行了2个新的操作，线程：%@", [NSThread currentThread]);
+            NSLog(@"group-2 线程：%@", [NSThread currentThread]);
         }];
     
         [operation addExecutionBlock:^() {
-            NSLog(@"又执行了3个新的操作，线程：%@", [NSThread currentThread]);
+            NSLog(@"group-3 ：%@", [NSThread currentThread]);
         }];
         
         // 开始执行任务  
