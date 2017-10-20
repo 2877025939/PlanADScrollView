@@ -44,7 +44,8 @@
     
     PlanADScrollView *ad1 =[[PlanADScrollView alloc]initWithFrame:CGRectMake(0, 400, self.view.frame.size.width, 200)imageUrls:imageUrl1s placeholderimage:nil];
     ad1.delegate =self;
-    ad1.pageContolStyle = PlanPageContolStyleNone;
+    ad1.pageContolStyle = PlanPageContolStyleImage;
+    [ad1 currentImage:[UIImage imageNamed:@"check"] pageImage:[UIImage imageNamed:@"check1"]];
     [self.view addSubview:ad1];
 
 }

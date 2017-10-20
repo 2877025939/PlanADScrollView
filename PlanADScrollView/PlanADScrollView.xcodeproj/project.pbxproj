@@ -249,10 +249,10 @@
 		27F117A31F98E8AD00F9CA18 /* PlanADScrollView */ = {
 			isa = PBXGroup;
 			children = (
-				27F117A41F98E8AD00F9CA18 /* PlanADCollectionViewCell.h */,
-				27F117A51F98E8AD00F9CA18 /* PlanADCollectionViewCell.m */,
 				27F117A61F98E8AD00F9CA18 /* PlanADScrollView.h */,
 				27F117A71F98E8AD00F9CA18 /* PlanADScrollView.m */,
+				27F117A41F98E8AD00F9CA18 /* PlanADCollectionViewCell.h */,
+				27F117A51F98E8AD00F9CA18 /* PlanADCollectionViewCell.m */,
 				27F117A81F98E8AD00F9CA18 /* PlanPageControl.h */,
 				27F117A91F98E8AD00F9CA18 /* PlanPageControl.m */,
 			);

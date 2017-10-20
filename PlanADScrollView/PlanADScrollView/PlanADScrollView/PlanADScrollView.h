@@ -43,6 +43,14 @@ typedef enum {
              placeholderimage:(UIImage*)placeholderimage;
 
 
+/**
+ 当选中的PlanPageContolStyle 是PlanPageContolStyleImage, 图片类型的时候调用，
+ 如果不调用使用默认图片
+ currentImage      选中图片
+ pageImage         默认图片
+ */
+-(void)currentImage:(UIImage *)currentImage
+          pageImage:(UIImage*)pageImage;
 
 
 @end

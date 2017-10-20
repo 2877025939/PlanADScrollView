@@ -39,29 +39,6 @@
     return self;
 }
 
--(void)setPageContolStyle:(PlanPageContolStyle)pageContolStyle{
-    
-    _pageContolStyle =pageContolStyle;
-    
-    if (pageContolStyle == PlanPageContolStyleNone) {
-        self.pageControl.pointSize = CGSizeMake(8, 8);
-       
-        
-    }else if (pageContolStyle == PlanPageContolStyleRectangle){
-        self.pageControl.pointSize = CGSizeMake(10, 4);
-   
-        self.pageControl.currentImage =[self createImageColor:[UIColor whiteColor] size:CGSizeMake(10, 5)];
-        self.pageControl.pageImage =[self createImageColor:[UIColor blueColor] size:CGSizeMake(10, 5)];
-        
-    }else if(pageContolStyle == PlanPageContolStyleImage){
-        self.pageControl.pointSize = CGSizeMake(8, 8);
-        self.pageControl.currentImage =[UIImage imageNamed:@"check"];
-        self.pageControl.pageImage =[UIImage imageNamed:@"check1"];
-
-    }
-
-}
-
 - (void)creatrUIImageUrls:(NSArray *)imageUrls placeholderimage:(UIImage*)placeholderimage
 {
     [self addSubview:self.collectionView];
@@ -174,6 +151,40 @@
     UIGraphicsEndImageContext();
     
     return newImage;
+}
+#pragma mark - 设置选择图片和 默认图片
+-(void)currentImage:(UIImage *)currentImage
+          pageImage:(UIImage*)pageImage{
+    
+    self.pageControl.currentImage = currentImage;
+    self.pageControl.pageImage = pageImage;
+    
+}
+
+
+
+#pragma mark - set方法
+-(void)setPageContolStyle:(PlanPageContolStyle)pageContolStyle{
+    
+    _pageContolStyle =pageContolStyle;
+    
+    if (pageContolStyle == PlanPageContolStyleNone) {
+        self.pageControl.pointSize = CGSizeMake(8, 8);
+        
+        
+    }else if (pageContolStyle == PlanPageContolStyleRectangle){
+        self.pageControl.pointSize = CGSizeMake(10, 4);
+        
+        self.pageControl.currentImage =[self createImageColor:[UIColor whiteColor] size:CGSizeMake(10, 5)];
+        self.pageControl.pageImage =[self createImageColor:[UIColor blueColor] size:CGSizeMake(10, 5)];
+        
+    }else if(pageContolStyle == PlanPageContolStyleImage){
+        self.pageControl.pointSize = CGSizeMake(8, 8);
+        self.pageControl.currentImage =[UIImage imageNamed:@"check"];
+        self.pageControl.pageImage =[UIImage imageNamed:@"check1"];
+        
+    }
+    
 }
 
 #pragma mark - 懒加载
