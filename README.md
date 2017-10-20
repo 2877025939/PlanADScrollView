@@ -15,6 +15,7 @@ PlanADScrollView
    2.方条
    3.图片
   
+  ![image](https://github.com/2877025939/PlanADScrollView/blob/master/PlanADCreollView.gif)  
   
   在iOS开发的过程中如有遇到问题，欢迎联系我进行探讨交流.
 
