@@ -173,10 +173,12 @@
         
         
     }else if (pageContolStyle == PlanPageContolStyleRectangle){
+        
         self.pageControl.pointSize = CGSizeMake(10, 4);
         
-        self.pageControl.currentImage =[self createImageColor:[UIColor whiteColor] size:CGSizeMake(10, 5)];
-        self.pageControl.pageImage =[self createImageColor:[UIColor blueColor] size:CGSizeMake(10, 5)];
+        self.pageControl.currentImage =[self createImageColor:[UIColor whiteColor] size:CGSizeMake(10, 4)];
+        
+        self.pageControl.pageImage =[self createImageColor:[UIColor blueColor] size:CGSizeMake(10, 4)];
         
     }else if(pageContolStyle == PlanPageContolStyleImage){
         self.pageControl.pointSize = CGSizeMake(8, 8);
