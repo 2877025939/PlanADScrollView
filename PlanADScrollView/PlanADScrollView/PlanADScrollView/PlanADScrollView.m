@@ -98,7 +98,6 @@
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
     PlanADCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"PlanADCell" forIndexPath:indexPath];
-    
     [cell  imageStr:self.imageUrls[indexPath.row] placeholderimage:self.placeholderimage];
     return cell;
 }
@@ -106,7 +105,6 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     
     if([self.delegate respondsToSelector:@selector(PlanADScrollViewdidSelectAtIndex:)]){
-        
         [self.delegate PlanADScrollViewdidSelectAtIndex:indexPath.row];
     }
 }
@@ -171,13 +169,10 @@
     if (pageContolStyle == PlanPageContolStyleNone) {
         self.pageControl.pointSize = CGSizeMake(8, 8);
         
-        
     }else if (pageContolStyle == PlanPageContolStyleRectangle){
         
         self.pageControl.pointSize = CGSizeMake(10, 4);
-        
         self.pageControl.currentImage =[self createImageColor:[UIColor whiteColor] size:CGSizeMake(10, 4)];
-        
         self.pageControl.pageImage =[self createImageColor:[UIColor blueColor] size:CGSizeMake(10, 4)];
         
     }else if(pageContolStyle == PlanPageContolStyleImage){

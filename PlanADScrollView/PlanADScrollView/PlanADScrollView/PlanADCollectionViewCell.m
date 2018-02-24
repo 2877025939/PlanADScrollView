@@ -43,7 +43,6 @@
 - (void)layoutSubviews{
     
     [super layoutSubviews];
-    
     self.PlanADimageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
     
 }
@@ -54,9 +53,6 @@
     }else{
         self.PlanADimageView.image = [UIImage imageNamed:imageStr];
     }
-   
-   
-    
 }
 
 @end

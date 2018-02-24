@@ -11,5 +11,4 @@
 @interface PlanADCollectionViewCell : UICollectionViewCell
 
 -(void)imageStr:(NSString*)imageStr placeholderimage:(UIImage *)placeholderimage;
-
 @end
