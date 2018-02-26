@@ -24,7 +24,7 @@ typedef enum {
 @end
 
 @interface PlanADScrollView : UIView
-@property(nonatomic,weak) id<PlanADScrollViewDelegate> delegate;
+@property (nonatomic,weak) id<PlanADScrollViewDelegate> delegate;
 
 /** 
  pageContol点的样式
