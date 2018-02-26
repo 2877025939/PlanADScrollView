@@ -10,8 +10,8 @@
 
 @interface PlanPageControl : UIPageControl
 
-@property (nonatomic,strong)UIImage *currentImage; //选中图片
-@property (nonatomic,strong)UIImage *pageImage;    //默认图片
-@property (nonatomic,assign)CGSize pointSize;       //图标大小
+@property (nonatomic,strong) UIImage *currentImage; //选中图片
+@property (nonatomic,strong) UIImage *pageImage;    //默认图片
+@property (nonatomic,assign) CGSize pointSize;       //图标大小
 
 @end

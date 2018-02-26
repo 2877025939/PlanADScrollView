@@ -16,7 +16,6 @@ typedef enum {
 
 
 @protocol PlanADScrollViewDelegate <NSObject>
-
 /**
  代理回调方法，点击图片回调
  */
@@ -30,7 +29,7 @@ typedef enum {
 /** 
  pageContol点的样式
  */
-@property (nonatomic)PlanPageContolStyle pageContolStyle;
+@property (nonatomic,assign) PlanPageContolStyle pageContolStyle;
 
 
 /**

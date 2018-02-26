@@ -8,7 +8,6 @@
 
 #import "PlanADScrollView.h"
 #import "PlanADCollectionViewCell.h"
-
 #import "PlanPageControl.h"
 #define PlanSections 100
 
@@ -79,7 +78,6 @@
         nextSection++;
     }
     NSIndexPath *nextIndexPath = [NSIndexPath indexPathForItem:nextItem inSection:nextSection];
-    
     [self.collectionView scrollToItemAtIndexPath:nextIndexPath atScrollPosition:UICollectionViewScrollPositionLeft animated:YES];
 }
 
